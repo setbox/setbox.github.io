@@ -45,6 +45,7 @@ div::after {
   content: "";
   background: url("/images/wallpapers/curitiba.jpg");
   background-size: cover;
+  height: 100vh;
   opacity: 0.1;
   top: 0;
   left: 0;
@@ -94,6 +95,15 @@ div::after {
 }
 .area-rodape ul li a {
   background-color: transparent;
+}
+
+.area-final {
+  padding: 20px 0px;
+  font-size: 0.8rem;
+  background-color: var(--light-low);
+}
+.area-final span {
+  color: var(--featured);
 }
 
 /* .__middle-area {
