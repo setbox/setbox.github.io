@@ -1,0 +1,81 @@
+:root {
+  /* --dark-low: #666; */
+  --dark: #525965;
+  --dark-medium: #37404D;
+  --darker: #272D35;
+  
+  --light: #F6F9FB;
+  --ligther: #F2F2F2;
+  --light-low: #E3E3E3;
+  /* --light-medium: #ddd; */
+
+  --featured: #fb0d1c;
+  --featured-dark: #936EC9;
+  --featured-low: #5DB5A1;
+}
+
+* {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+
+body {
+  color: var(--dark-medium) !important;
+}
+
+.area {
+
+}
+
+.area-home {
+  background-color: #fb0d1c80;
+  color: #fff !important;
+  height: calc(100vh - 57px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    width: 30%;
+    color: var(--darker);
+  } */
+}
+
+div::after {
+  content: "";
+  background: url("/images/wallpapers/curitiba.jpg");
+  background-size: cover;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.area-clientes {
+  background-color: var(--light);
+}
+.area-clientes img {
+  max-height: 40px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
