@@ -55,8 +55,7 @@ div::after {
 }
 
 .area-clientes {
-  background-color: var(--light);
-  height: 100vh;
+  /* background-color: var(--light); */
 }
 .area-clientes span {
   display:inline-block;
@@ -69,6 +68,38 @@ div::after {
 .area-clientes span img:hover {
   filter: grayscale(0%);
   transition: .8s;
+}
+
+.area-rodape {
+  background-color: var(--ligther);
+}
+.area-rodape .icon-social-media {
+  opacity: 0.7;
+}
+.area-rodape h3 {
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--featured-dark);
+  font-weight: bold;
+  border-bottom: 2px solid var(--featured-dark);
+}
+
+.area-rodape ul li {
+  color: #575757;
+  border-bottom: 1px solid #E3E3E3;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+.area-rodape ul li a, .area-rodape ul li a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.area-rodape ul li a {
+  background-color: transparent;
 }
 
 /* .__middle-area {
