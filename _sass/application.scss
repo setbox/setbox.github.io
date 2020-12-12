@@ -32,6 +32,21 @@ a, a:hover {
   padding: 0px !important; 
 }
 
+.card {
+  &.card-comparativo {
+    
+    .card-header {
+      background-color: var(--featured-dark);
+      color: var(--white);
+    }
+    .card-body {
+      min-height: 230px;
+    }
+    .card-footer {
+    }
+  }
+}
+
 footer {
   padding: 0px var(--bs-gutter-x,.75rem);
 
