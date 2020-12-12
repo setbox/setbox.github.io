@@ -1,8 +1,8 @@
 :root {
-  /* --dark-low: #666; */
   --dark: #525965;
   --dark-medium: #37404D;
   --darker: #272D35;
+  --dark-low: #575757;
   
   --light: #F6F9FB;
   --ligther: #F2F2F2;
@@ -29,6 +29,12 @@ a, a:hover {
   text-decoration: none;
 }
 
+.icon {
+  max-width: 30px;
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
 .container-fluid {
   margin: 0;
   padding: 0;
@@ -45,14 +51,13 @@ a, a:hover {
 }
 
 .area-home {
-  background-color: #fb0d1c80;
+  background-color: rgba(251, 13, 28, 0.9);
   color: var(--white) !important;
   height: calc(100vh - 57px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .area-home::after {
   content: "";
   background: url("/images/wallpapers/curitiba.jpg");
@@ -67,6 +72,29 @@ a, a:hover {
   right: 0;
   position: absolute;
   z-index: -1;   
+}
+
+.area-header {
+  background-color: rgba(251, 13, 28, 0.9);
+  color: var(--white);
+}
+.area-header::after {
+  content: "";
+  background: url("/images/wallpapers/bytes.jpg");
+  background-size: cover;
+  height: 200px;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.area-conteudo .versus {
+  font-size: 6rem;
+  color: var(--featured-dark);
 }
 
 .area-clientes a img {
