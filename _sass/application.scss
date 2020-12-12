@@ -34,7 +34,6 @@ a, a:hover {
 
 .card {
   &.card-comparativo {
-    
     .card-header {
       background-color: var(--featured-dark);
       color: var(--white);
@@ -46,10 +45,11 @@ a, a:hover {
 
   &.card-subsidiaria {
     .card-body {
-      min-height: 360px;
+      min-height: 380px;
     }
     img {
-      height: 80px;
+      height: 100px;
+      margin: 40px 0px;
     }
   }
 }
