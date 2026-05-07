@@ -1,4 +1,4 @@
-# Design Reference — Setbox Sistemas Digitais
+# Design Reference - Setbox Sistemas Digitais
 
 Análise visual baseada em https://entire.io (referência editorial), adaptada para identidade Setbox.
 
@@ -6,7 +6,7 @@ Análise visual baseada em https://entire.io (referência editorial), adaptada p
 
 ## Identidade Visual
 
-**Filosofia:** Editorial minimalista. Swiss/International typographic style. Quase zero ornamento — todo o trabalho estético é feito por tipografia, espaçamento e uso cirúrgico da cor de destaque.
+**Filosofia:** Editorial minimalista. Swiss/International typographic style. Quase zero ornamento, todo o trabalho estético é feito por tipografia, espaçamento e uso cirúrgico da cor de destaque.
 
 **Paleta:**
 
@@ -17,7 +17,7 @@ Análise visual baseada em https://entire.io (referência editorial), adaptada p
 | `text` | `#111111` | Texto primário |
 | `text-muted` | `#555555–#888888` | Texto secundário, subtítulos |
 | `border` | `#E5E5E5` | Divisores, bordas de card |
-| `accent` | `#FB0D1C` | Vermelho Setbox — CTAs, bullets, labels, link ativo no nav |
+| `accent` | `#FB0D1C` | Vermelho Setbox: CTAs, bullets, labels, link ativo no nav |
 | `accent-hover` | `#C4000F` | Hover de botões e links vermelhos |
 | `status-ok` | `#22C55E` | Dot "Operacional" no footer |
 
