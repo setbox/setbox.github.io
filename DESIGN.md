@@ -152,6 +152,35 @@ Rua João Bettega, 649      Open Source
 
 ---
 
+## Paletas por marca
+
+Tipografia, layout, espaçamento e componentes são sempre os padrões Setbox acima. Só a paleta de accent muda por marca.
+
+| Marca | Accent | Hover | Contexto |
+|---|---|---|---|
+| Setbox (site) | `#FB0D1C` | `#C4000F` | Identidade principal. Todos os produtos próprios herdam. |
+| ReDoc | `#FB0D1C` | `#C4000F` | Produto Setbox. Herda vermelho. |
+| Integra Moda | `#FB0D1C` | `#C4000F` | Produto Setbox. Herda vermelho. |
+| Agroprocess | `#3FA110` | `#146E37` | Divisão agro. Paleta Sicredi (verde cooperativo). |
+
+### Tokens Agroprocess (Sicredi)
+
+| Token | Valor | Uso |
+|---|---|---|
+| `accent` | `#3FA110` | CTAs, labels de seção, ícones, nav ativo |
+| `accent-hover` | `#146E37` | Hover de botões primários |
+| `accent-dark` | `#146E37` | Fundo de seção CTA final |
+| `accent-lt` | `#F2F9ED` | Fundo de ícone em card, seções sutis |
+| `yellow` | `#FFCD00` | Botão de destaque sobre fundo verde escuro |
+| `neutral-lt` | `#D7E6C8` | Bordas de cards em seções com fundo verde |
+| `neutral` | `#5A645A` | Texto secundário em contexto agro |
+
+Labels de seção Agroprocess: `text-[11px] text-[#3FA110] font-semibold tracking-wide uppercase`
+
+Bullets Agroprocess: `<span class="font-bold flex-shrink-0" style="color:#3FA110;">→</span>`
+
+---
+
 ## Tom Visual Geral
 
 - **Zero decoração:** sem gradientes, sem shadows, sem ilustrações, sem stock photos
