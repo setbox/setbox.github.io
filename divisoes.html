@@ -44,7 +44,23 @@
         <a href="servicos.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Serviços</a>
         <a href="divisoes.html" class="hidden md:block text-sm text-[#FB0D1C] font-medium">Divisões</a>
         <a href="sobre.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Sobre</a>
-        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Falar conosco</a>
+        <button id="nav-toggle" class="md:hidden p-1" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="9" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="15" width="20" height="2" rx="1" fill="#111111"/>
+          </svg>
+        </button>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Fale conosco</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="hidden md:hidden border-t border-[#E5E5E5]">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+        <a href="produtos/" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Produtos</a>
+        <a href="servicos.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Serviços</a>
+        <a href="divisoes.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Divisões</a>
+        <a href="sobre.html" class="text-sm text-[#111111] py-2.5 hover:opacity-50 transition-opacity">Sobre</a>
       </div>
     </div>
   </nav>
@@ -88,13 +104,13 @@
 
         <!-- PJ Park -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <a href="https://pjpark.com.br" target="_blank" class="border border-[#E5E5E5] rounded-xl bg-white p-8 flex items-center justify-center order-2 md:order-1 group">
+          <a href="divisoes/pjpark/" class="border border-[#E5E5E5] rounded-xl bg-white p-8 flex items-center justify-center order-2 md:order-1 group">
             <img src="assets/subsidiarias/pjpark.png" alt="PJ Park" class="max-h-32 w-auto transition-transform group-hover:scale-105" loading="lazy" width="600" height="600">
           </a>
           <div class="order-1 md:order-2">
-                        <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">PJ Park</h2>
+            <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">PJ Park</h2>
             <p class="text-[15px] leading-[1.8] text-[#555555] mb-6">O primeiro escritório online especializado em empresas inativas. Soluções ágeis e digitais para regularização, manutenção e encerramento de CNPJs.</p>
-            <a href="https://pjpark.com.br" target="_blank" class="inline-flex items-center gap-2 text-[14px] text-[#FB0D1C] font-medium hover:opacity-70 transition-opacity">Acessar site →</a>
+            <a href="divisoes/pjpark/" class="inline-flex items-center gap-2 text-[14px] text-[#FB0D1C] font-medium hover:opacity-70 transition-opacity">Ver divisão →</a>
           </div>
         </div>
 
@@ -121,5 +137,12 @@
     </div>
   </footer>
 
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', String(!menu.classList.contains('hidden')));
+    });
+  </script>
 </body>
 </html>

@@ -38,10 +38,17 @@
     .container-inner { max-width: 1024px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
     @media (max-width: 768px) {
       .container-inner { padding-left: 16px; padding-right: 16px; }
-      .two-col { grid-template-columns: 1fr !important; }
-      .three-col { grid-template-columns: 1fr !important; }
+      .two-col { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .two-col > * { min-width: 0; }
+      .three-col { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .three-col > * { min-width: 0; }
       .viewer-editor-grid { grid-template-columns: 1fr !important; }
+      .viewer-editor-grid > div { padding: 24px !important; }
       .editor-col { border-left: none !important; border-top: 1px solid #E5E5E5 !important; }
+      main section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      .hero-cta { flex-direction: column !important; }
+      .hero-cta a { width: 100% !important; text-align: center !important; box-sizing: border-box; }
+      .file-card-name { white-space: normal !important; overflow: visible !important; text-overflow: unset !important; }
     }
   </style>
 </head>
@@ -64,7 +71,23 @@
         <a href="../../servicos.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Serviços</a>
         <a href="../../divisoes.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Divisões</a>
         <a href="../../sobre.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Sobre</a>
-        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Falar conosco</a>
+        <button id="nav-toggle" class="md:hidden p-1" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="9" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="15" width="20" height="2" rx="1" fill="#111111"/>
+          </svg>
+        </button>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Fale conosco</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="hidden md:hidden border-t border-[#E5E5E5]">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+        <a href="../" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Produtos</a>
+        <a href="../../servicos.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Serviços</a>
+        <a href="../../divisoes.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Divisões</a>
+        <a href="../../sobre.html" class="text-sm text-[#111111] py-2.5 hover:opacity-50 transition-opacity">Sobre</a>
       </div>
     </div>
   </nav>
@@ -81,10 +104,9 @@
               Documentação que pertence ao seu time
             </h1>
             <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#555555] mb-8">
-              Markdown puro. Compatível com Git. Totalmente offline.<br>
-              Sem servidor. Sem nuvem. Sem vendor lock-in.
+              Markdown puro. Compatível com Git. Totalmente offline. Sem servidor. Sem nuvem. Sem vendor lock-in.
             </p>
-            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:12px;">
               <a href="mailto:contato@setbox.com.br?subject=ReDoc - Solicitação de demonstração" class="inline-block text-[14px] bg-[#FB0D1C] text-white px-6 py-3 rounded-[6px] hover:bg-[#C4000F] transition-colors font-semibold">Solicitar demonstração</a>
               <a href="#funcionalidades" class="inline-block text-[14px] text-[#111111] px-6 py-3 rounded-[6px] border border-[#E5E5E5] hover:bg-[#F7F7F7] transition-colors font-medium">Ver funcionalidades →</a>
             </div>
@@ -121,7 +143,7 @@
             <div class="border border-[#E5E5E5] rounded-xl bg-white p-4" style="display:flex;align-items:center;gap:14px;">
               <span style="font-size:18px;flex-shrink:0;">📄</span>
               <div style="min-width:0;">
-                <div class="text-[13px] font-medium text-[#111111]" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">relatorio-final-v3-REVISADO.pdf</div>
+                <div class="text-[13px] font-medium text-[#111111]" class="file-card-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">relatorio-final-v3-REVISADO.pdf</div>
                 <div class="text-[12px] text-[#888888] mt-0.5">Última atualização: há 2 anos</div>
               </div>
               <span class="text-[11px] font-semibold ml-auto flex-shrink-0" style="letter-spacing:0.04em;padding:3px 8px;border-radius:9999px;background:#fef9c3;border:1px solid #fde047;color:#713f12;">DESATUALIZADO</span>
@@ -129,7 +151,7 @@
             <div class="border border-[#E5E5E5] rounded-xl bg-white p-4" style="display:flex;align-items:center;gap:14px;">
               <span style="font-size:18px;flex-shrink:0;">📝</span>
               <div style="min-width:0;">
-                <div class="text-[13px] font-medium text-[#111111]" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">spec-api-CONFLITO.docx</div>
+                <div class="text-[13px] font-medium text-[#111111]" class="file-card-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">spec-api-CONFLITO.docx</div>
                 <div class="text-[12px] text-[#888888] mt-0.5">3 versões em circulação</div>
               </div>
               <span class="text-[11px] font-semibold ml-auto flex-shrink-0" style="letter-spacing:0.04em;padding:3px 8px;border-radius:9999px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;">CONFLITO</span>
@@ -471,5 +493,12 @@
     </div>
   </footer>
 
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', String(!menu.classList.contains('hidden')));
+    });
+  </script>
 </body>
 </html>

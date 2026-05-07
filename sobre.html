@@ -44,7 +44,23 @@
         <a href="servicos.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Serviços</a>
         <a href="divisoes.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Divisões</a>
         <a href="sobre.html" class="hidden md:block text-sm text-[#FB0D1C] font-medium">Sobre</a>
-        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Falar conosco</a>
+        <button id="nav-toggle" class="md:hidden p-1" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="9" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="15" width="20" height="2" rx="1" fill="#111111"/>
+          </svg>
+        </button>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Fale conosco</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="hidden md:hidden border-t border-[#E5E5E5]">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+        <a href="produtos/" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Produtos</a>
+        <a href="servicos.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Serviços</a>
+        <a href="divisoes.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Divisões</a>
+        <a href="sobre.html" class="text-sm text-[#111111] py-2.5 hover:opacity-50 transition-opacity">Sobre</a>
       </div>
     </div>
   </nav>
@@ -137,5 +153,12 @@
     </div>
   </footer>
 
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', String(!menu.classList.contains('hidden')));
+    });
+  </script>
 </body>
 </html>

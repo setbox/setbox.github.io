@@ -162,6 +162,7 @@ Tipografia, layout, espaçamento e componentes são sempre os padrões Setbox ac
 | ReDoc | `#FB0D1C` | `#C4000F` | Produto Setbox. Herda vermelho. |
 | Integra Moda | `#FB0D1C` | `#C4000F` | Produto Setbox. Herda vermelho. |
 | Agroprocess | `#3FA110` | `#146E37` | Divisão agro. Paleta Sicredi (verde cooperativo). |
+| PJ Park | `#ff3f6e` | `#193044` | Divisão legaltech. Paleta própria (rosa + azul-marinho). |
 
 ### Tokens Agroprocess (Sicredi)
 
@@ -178,6 +179,22 @@ Tipografia, layout, espaçamento e componentes são sempre os padrões Setbox ac
 Labels de seção Agroprocess: `text-[11px] text-[#3FA110] font-semibold tracking-wide uppercase`
 
 Bullets Agroprocess: `<span class="font-bold flex-shrink-0" style="color:#3FA110;">→</span>`
+
+### Tokens PJ Park
+
+| Token | Valor | Uso |
+|---|---|---|
+| `accent` | `#ff3f6e` | CTAs, labels de seção, ícones, nav ativo, links |
+| `accent-hover` | `#193044` | Hover de botões (inverte para navy) |
+| `dark` | `#193044` | Fundo de seções hero escuras, header, footer |
+| `dark-secondary` | `#2b4153` | Botões secundários, texto em contexto escuro |
+| `bg-muted` | `#f0f4f8` | Fundo de seções alternadas (azul-acinzentado claro) |
+| `icon-bg` | `#fff0f4` | Fundo de ícone em card (rosa ultraclaro) |
+| `text-on-dark` | `#c7cbcf` | Texto secundário sobre fundo navy |
+
+Labels de seção PJ Park: `text-[11px] font-semibold tracking-wide uppercase" style="color:#ff3f6e;"`
+
+Bullets PJ Park: `<span class="font-bold flex-shrink-0" style="color:#ff3f6e;">→</span>`
 
 ---
 
