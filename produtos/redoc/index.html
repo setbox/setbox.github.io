@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReDoc é um aplicativo desktop para documentação corporativa em Markdown. Offline, versionável em Git, distribuível como pacote único. Sem servidor, sem nuvem.">
+  <link rel="canonical" href="https://setbox.com.br/produtos/redoc/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Setbox Sistemas Digitais">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://setbox.com.br/produtos/redoc/">
+  <meta property="og:title" content="ReDoc - Documentação corporativa offline e versionável - Setbox">
+  <meta property="og:description" content="ReDoc é um aplicativo desktop para documentação corporativa em Markdown. Offline, versionável em Git, distribuível como pacote único. Sem servidor, sem nuvem.">
+  <meta property="og:image" content="https://setbox.com.br/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ReDoc - Documentação corporativa offline e versionável">
+  <meta name="twitter:description" content="ReDoc é um aplicativo desktop para documentação corporativa em Markdown. Offline, versionável em Git, distribuível como pacote único.">
+  <title>ReDoc - Documentação corporativa offline e versionável - Setbox</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+  <link rel="mask-icon" href="../../assets/safari-pinned-tab.svg" color="#FB0D1C">
+  <link rel="manifest" href="../../assets/site.webmanifest">
+  <meta name="msapplication-config" content="../../assets/browserconfig.xml">
+  <meta name="theme-color" content="#FB0D1C">
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','-apple-system','sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #FAFAFA; color: #111111; }
+    html { scroll-behavior: smooth; }
+    .container-inner { max-width: 1024px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+    @media (max-width: 768px) {
+      .container-inner { padding-left: 16px; padding-right: 16px; }
+      .two-col { grid-template-columns: 1fr !important; }
+      .three-col { grid-template-columns: 1fr !important; }
+      .viewer-editor-grid { grid-template-columns: 1fr !important; }
+      .editor-col { border-left: none !important; border-top: 1px solid #E5E5E5 !important; }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <!-- Announcement strip -->
+  <div style="background:#fef9c3;border-bottom:1px solid #fde047;">
+    <div class="container-inner" style="padding-top:10px;padding-bottom:10px;text-align:center;font-size:13px;font-weight:500;color:#713f12;">
+      ReDoc está em desenvolvimento ativo -
+      <a href="mailto:contato@setbox.com.br?subject=ReDoc - Solicitação de demonstração" style="text-decoration:underline;color:#713f12;">solicite uma demonstração antecipada para o seu time</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-[#FAFAFA] border-b border-[#E5E5E5]">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
+      <a href="../../index.html"><img src="../../assets/setbox-lateral.png" alt="Setbox" class="h-6 w-auto" width="1405" height="466"></a>
+      <div class="flex items-center gap-4 md:gap-7">
+        <a href="../../produtos.html" class="hidden md:block text-sm text-[#FB0D1C] font-medium">Produtos</a>
+        <a href="../../servicos.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Serviços</a>
+        <a href="../../divisoes.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Divisões</a>
+        <a href="../../sobre.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Sobre</a>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#FB0D1C] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-medium whitespace-nowrap">Falar conosco</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="border-b border-[#E5E5E5]" style="padding-top:96px;padding-bottom:96px;">
+      <div class="container-inner">
+        <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+          <div>
+            <p class="text-[11px] text-[#FB0D1C] font-semibold tracking-wide uppercase mb-4">App desktop · macOS · Windows · Linux</p>
+            <h1 class="text-[38px] md:text-[52px] font-extrabold leading-[1.05] tracking-[-0.03em] text-[#111111] mb-6">
+              Documentação que pertence ao seu time
+            </h1>
+            <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#555555] mb-8">
+              Markdown puro. Compatível com Git. Totalmente offline.<br>
+              Sem servidor. Sem nuvem. Sem vendor lock-in.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="mailto:contato@setbox.com.br?subject=ReDoc - Solicitação de demonstração" class="inline-block text-[14px] bg-[#FB0D1C] text-white px-6 py-3 rounded-[6px] hover:bg-[#C4000F] transition-colors font-semibold">Solicitar demonstração</a>
+              <a href="#funcionalidades" class="inline-block text-[14px] text-[#111111] px-6 py-3 rounded-[6px] border border-[#E5E5E5] hover:bg-[#F7F7F7] transition-colors font-medium">Ver funcionalidades →</a>
+            </div>
+          </div>
+          <div>
+            <img src="assets/screenshots/Screenshot%202026-05-07%20at%2010.29.42.png"
+                 alt="ReDoc - lista de projetos"
+                 class="w-full rounded-xl border border-[#E5E5E5] block"
+                 width="1824" height="1344" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="border-b border-[#E5E5E5]" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+          <div>
+            <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">
+              Documentação corporativa está quebrada
+            </h2>
+            <p class="text-[15px] leading-[1.8] text-[#555555] mb-4">
+              PDFs que ninguém atualiza. Arquivos DOCX enviados por e-mail. Wikis que exigem login ou servidor online.
+            </p>
+            <p class="text-[15px] leading-[1.8] text-[#555555] mb-4">
+              Documentação que não versiona, não mostra diferenças e não sobrevive ao tempo.
+            </p>
+            <p class="text-[15px] leading-[1.8] text-[#555555]">
+              ReDoc resolve isso tratando documentação como código - texto puro, versionado em Git, legível para sempre.
+            </p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="border border-[#E5E5E5] rounded-xl bg-white p-4" style="display:flex;align-items:center;gap:14px;">
+              <span style="font-size:18px;flex-shrink:0;">📄</span>
+              <div style="min-width:0;">
+                <div class="text-[13px] font-medium text-[#111111]" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">relatorio-final-v3-REVISADO.pdf</div>
+                <div class="text-[12px] text-[#888888] mt-0.5">Última atualização: há 2 anos</div>
+              </div>
+              <span class="text-[11px] font-semibold ml-auto flex-shrink-0" style="letter-spacing:0.04em;padding:3px 8px;border-radius:9999px;background:#fef9c3;border:1px solid #fde047;color:#713f12;">DESATUALIZADO</span>
+            </div>
+            <div class="border border-[#E5E5E5] rounded-xl bg-white p-4" style="display:flex;align-items:center;gap:14px;">
+              <span style="font-size:18px;flex-shrink:0;">📝</span>
+              <div style="min-width:0;">
+                <div class="text-[13px] font-medium text-[#111111]" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">spec-api-CONFLITO.docx</div>
+                <div class="text-[12px] text-[#888888] mt-0.5">3 versões em circulação</div>
+              </div>
+              <span class="text-[11px] font-semibold ml-auto flex-shrink-0" style="letter-spacing:0.04em;padding:3px 8px;border-radius:9999px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;">CONFLITO</span>
+            </div>
+            <div class="border border-[#E5E5E5] rounded-xl bg-white p-4" style="display:flex;align-items:center;gap:14px;">
+              <span style="font-size:18px;flex-shrink:0;">🔗</span>
+              <div style="min-width:0;">
+                <div class="text-[13px] font-medium text-[#111111]">Wiki interna</div>
+                <div class="text-[12px] text-[#888888] mt-0.5">Servidor offline. Sem acesso remoto.</div>
+              </div>
+              <span class="text-[11px] font-semibold ml-auto flex-shrink-0" style="letter-spacing:0.04em;padding:3px 8px;border-radius:9999px;background:#F7F7F7;border:1px solid #E5E5E5;color:#888888;">INDISPONÍVEL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="border-b border-[#E5E5E5]" id="funcionalidades" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div style="text-align:center;margin-bottom:56px;">
+          <p class="text-[11px] text-[#FB0D1C] font-semibold tracking-wide uppercase mb-3">O que torna o ReDoc diferente</p>
+          <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111]" style="max-width:560px;margin:0 auto;">
+            Projetado para durar anos, não sprints
+          </h2>
+        </div>
+        <div class="three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;">
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Vive no seu repositório Git</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Cada página é um arquivo <code class="text-[12px] bg-[#F7F7F7] border border-[#E5E5E5] rounded px-1">.md</code>. Branch, commit, diff, revisão - a documentação segue o mesmo fluxo do código.</p>
+          </div>
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Sem servidor. Nunca.</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Abra uma pasta local ou um pacote <code class="text-[12px] bg-[#F7F7F7] border border-[#E5E5E5] rounded px-1">.redoc</code>. Pesquise, navegue e leia sem conexão e sem serviço em execução.</p>
+          </div>
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Busca instantânea, embutida</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Encontre qualquer conteúdo em toda a documentação em milissegundos. SQLite FTS5. Sem plugin, sem nuvem.</p>
+          </div>
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Organização por arrastar e soltar</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Monte o menu com editor visual de árvore. Crie seções, reordene páginas, oculte rascunhos - sem editar configuração.</p>
+          </div>
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Distribua como pacote <code class="text-[12px] bg-[#F7F7F7] border border-[#E5E5E5] rounded px-1">.redoc</code></h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Exporte toda a documentação como um único arquivo portátil. Compartilhe por e-mail, USB ou rede interna.</p>
+          </div>
+
+          <div>
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">Templates estruturados</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Crie casos de uso, specs, runbooks e ADRs a partir de templates prontos. Consistência sem cópia manual.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="border-b border-[#E5E5E5]" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div style="text-align:center;margin-bottom:48px;">
+          <p class="text-[11px] text-[#FB0D1C] font-semibold tracking-wide uppercase mb-3">Veja o ReDoc em ação</p>
+          <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111]">
+            Leitura limpa. Edição poderosa.
+          </h2>
+        </div>
+        <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <img src="assets/screenshots/Screenshot%202026-05-07%20at%2010.29.49.png"
+                 alt="ReDoc - Editor com preview ao vivo"
+                 class="w-full rounded-xl border border-[#E5E5E5] block mb-3"
+                 width="3248" height="2000" loading="lazy">
+            <p class="text-[13px] font-medium text-[#111111] mb-1">Editor com preview ao vivo</p>
+            <p class="text-[13px] leading-[1.7] text-[#555555]">Escreva Markdown à esquerda, veja o resultado renderizado em tempo real.</p>
+          </div>
+          <div>
+            <img src="assets/screenshots/Screenshot%202026-05-07%20at%2010.30.11.png"
+                 alt="ReDoc - Admonitions e diagramas Mermaid"
+                 class="w-full rounded-xl border border-[#E5E5E5] block mb-3"
+                 width="3248" height="2000" loading="lazy">
+            <p class="text-[13px] font-medium text-[#111111] mb-1">Admonitions e diagramas</p>
+            <p class="text-[13px] leading-[1.7] text-[#555555]">Notas, avisos e diagramas Mermaid renderizados nativamente no documento.</p>
+          </div>
+          <div>
+            <img src="assets/screenshots/Screenshot%202026-05-07%20at%2010.31.14.png"
+                 alt="ReDoc - Tema escuro"
+                 class="w-full rounded-xl border border-[#E5E5E5] block mb-3"
+                 width="3248" height="2000" loading="lazy">
+            <p class="text-[13px] font-medium text-[#111111] mb-1">Suporte a temas</p>
+            <p class="text-[13px] leading-[1.7] text-[#555555]">Temas claro, escuro e personalizados. Aplique a identidade visual da sua empresa.</p>
+          </div>
+          <div class="border border-[#E5E5E5] rounded-xl bg-[#F7F7F7] p-8" style="display:flex;flex-direction:column;justify-content:center;">
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-3">Dois modos de abertura</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555] mb-3">Aponte para uma pasta <code class="text-[12px] bg-white border border-[#E5E5E5] rounded px-1">docs/</code> durante o desenvolvimento ou distribua um pacote <code class="text-[12px] bg-white border border-[#E5E5E5] rounded px-1">.redoc</code> para os leitores.</p>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Mesmo conteúdo. Mesma experiência. Nenhum servidor necessário.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEWER VS EDITOR -->
+    <section class="border-b border-[#E5E5E5]" id="viewer-editor" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div style="text-align:center;margin-bottom:48px;">
+          <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111]">
+            Gratuito para ler. Poderoso para escrever.
+          </h2>
+        </div>
+        <div class="viewer-editor-grid" style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #E5E5E5;border-radius:12px;overflow:hidden;">
+          <!-- Viewer -->
+          <div style="padding:40px;">
+            <span class="inline-flex text-[11px] font-semibold tracking-wide uppercase mb-5" style="padding:3px 10px;border-radius:9999px;background:#F7F7F7;border:1px solid #E5E5E5;color:#555555;">GRATUITO · PARA SEMPRE</span>
+            <h3 class="text-[22px] font-bold tracking-tight text-[#111111] mb-5">ReDoc Viewer</h3>
+            <ul class="space-y-3 mb-8">
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Abrir pasta ou pacote <code class="text-[12px] bg-[#F7F7F7] border border-[#E5E5E5] rounded px-1">.redoc</code>
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Navegação lateral completa
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Busca full-text offline
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Índice interno da página
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Exibição de versão da documentação
+              </li>
+            </ul>
+            <a href="mailto:contato@setbox.com.br?subject=ReDoc Viewer - Solicitar acesso antecipado" class="inline-block text-[14px] text-[#111111] px-5 py-2.5 rounded-[6px] border border-[#E5E5E5] hover:bg-[#F7F7F7] transition-colors font-medium">Solicitar acesso antecipado</a>
+          </div>
+          <!-- Editor -->
+          <div class="editor-col" style="padding:40px;background:#F7F7F7;border-left:1px solid #E5E5E5;">
+            <span class="inline-flex text-[11px] font-semibold tracking-wide uppercase mb-5" style="padding:3px 10px;border-radius:9999px;background:#fff;border:1px solid rgba(251,13,28,0.25);color:#FB0D1C;">LICENÇA EDITOR</span>
+            <h3 class="text-[22px] font-bold tracking-tight text-[#111111] mb-5">ReDoc Editor</h3>
+            <ul class="space-y-3 mb-8">
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Tudo do Viewer
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Criar e editar páginas Markdown
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Editor dividido com preview ao vivo
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Gerenciador visual de TOC (drag &amp; drop)
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Templates de documentos
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Exportar pacote <code class="text-[12px] bg-white border border-[#E5E5E5] rounded px-1">.redoc</code>
+              </li>
+              <li class="flex gap-3 text-[14px] text-[#444444]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB0D1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Validação de integridade (links, imagens)
+              </li>
+            </ul>
+            <a href="mailto:contato@setbox.com.br?subject=ReDoc Editor - Solicitar demonstração" class="inline-block text-[14px] bg-[#FB0D1C] text-white px-5 py-2.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-semibold">Solicitar demonstração do Editor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY -->
+    <section class="border-b border-[#E5E5E5]" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner" style="text-align:center;">
+        <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111] mb-5">
+          Construído para times que se importam com qualidade
+        </h2>
+        <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#555555] mb-14" style="max-width:520px;margin-left:auto;margin-right:auto;">
+          O ReDoc inclui um motor de validação que verifica a documentação antes de distribuir. Links quebrados, imagens ausentes, páginas órfãs - tudo identificado antes de chegar aos leitores.
+        </p>
+        <div class="three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:640px;margin:0 auto;">
+          <div>
+            <div class="text-[48px] font-extrabold tracking-tight text-[#111111] leading-none mb-2">100%</div>
+            <div class="text-[11px] font-semibold text-[#888888] tracking-wide uppercase">texto puro sem formato proprietário</div>
+          </div>
+          <div>
+            <div class="text-[48px] font-extrabold tracking-tight text-[#111111] leading-none mb-2">0</div>
+            <div class="text-[11px] font-semibold text-[#888888] tracking-wide uppercase">dependências de servidor</div>
+          </div>
+          <div>
+            <div class="text-[48px] font-extrabold tracking-tight text-[#111111] leading-none mb-2">Git</div>
+            <div class="text-[11px] font-semibold text-[#888888] tracking-wide uppercase">branch, diff e revisão nativos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="border-b border-[#E5E5E5]" id="para-quem" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div style="text-align:center;margin-bottom:48px;">
+          <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111]">
+            Quem usa o ReDoc
+          </h2>
+        </div>
+        <div class="three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+          <div class="border border-[#E5E5E5] rounded-xl bg-white p-6">
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-3">Times de software</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Mantenha documentação técnica junto ao código. Versione, revise e publique juntos no mesmo repositório.</p>
+          </div>
+          <div class="border border-[#E5E5E5] rounded-xl bg-white p-6">
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-3">Software houses</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Entregue documentação profissional em cada projeto. Estruturada, versionada e distribuída como arquivo único.</p>
+          </div>
+          <div class="border border-[#E5E5E5] rounded-xl bg-white p-6">
+            <div style="width:24px;height:24px;margin-bottom:14px;color:#888888;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-3">Empresas reguladas</h3>
+            <p class="text-[14px] leading-[1.7] text-[#555555]">Auditoria, histórico de versões e diffs em texto puro. Documentação que atende revisões de conformidade sem ferramentas especiais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="border-b border-[#E5E5E5]" id="pricing" style="padding-top:80px;padding-bottom:80px;">
+      <div class="container-inner">
+        <div style="text-align:center;margin-bottom:48px;">
+          <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111] mb-3">
+            Preço simples. Sem surpresas.
+          </h2>
+          <p class="text-[15px] leading-[1.7] text-[#555555]">Licença perpétua com período de atualização. Sem assinatura obrigatória.</p>
+        </div>
+        <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin:0 auto;">
+          <div class="border border-[#E5E5E5] rounded-xl bg-white p-8">
+            <h3 class="text-[17px] font-semibold tracking-tight text-[#111111] mb-2">ReDoc Viewer</h3>
+            <div class="text-[48px] font-extrabold tracking-tight text-[#111111] leading-none mb-1">Grátis</div>
+            <p class="text-[13px] text-[#888888] mb-6 mt-1">Para sempre. Sem conta necessária.</p>
+            <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:8px;">
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Abrir e ler documentação</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Busca offline</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Navegação completa</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Índice interno da página</li>
+            </ul>
+            <a href="mailto:contato@setbox.com.br?subject=ReDoc - Solicitar acesso antecipado" class="inline-block w-full text-center text-[14px] text-[#111111] px-5 py-2.5 rounded-[6px] border border-[#E5E5E5] hover:bg-[#F7F7F7] transition-colors font-medium">Solicitar acesso antecipado</a>
+          </div>
+          <div class="border border-[#E5E5E5] rounded-xl bg-[#F7F7F7] p-8">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <h3 class="text-[17px] font-semibold tracking-tight text-[#111111]">ReDoc Editor</h3>
+              <span class="text-[11px] font-semibold tracking-wide uppercase" style="padding:3px 8px;border-radius:9999px;background:#fff;border:1px solid rgba(251,13,28,0.25);color:#FB0D1C;">Perpétua</span>
+            </div>
+            <div class="text-[28px] font-bold tracking-tight text-[#555555] leading-none mb-1">Consulte valores</div>
+            <p class="text-[13px] text-[#888888] mb-6 mt-1">Individual · Time · Enterprise</p>
+            <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:8px;">
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Tudo do Viewer</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Edição completa de Markdown</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Templates e TOC visual</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Exportação de pacotes</li>
+              <li class="flex gap-3 text-[13px] text-[#444444]"><span class="text-[#FB0D1C] font-bold flex-shrink-0">→</span>Validação de integridade</li>
+            </ul>
+            <a href="mailto:contato@setbox.com.br?subject=ReDoc Editor - Solicitar demonstração" class="inline-block w-full text-center text-[14px] bg-[#FB0D1C] text-white px-5 py-2.5 rounded-[6px] hover:bg-[#C4000F] transition-colors font-semibold">Solicitar demonstração</a>
+          </div>
+        </div>
+        <p class="text-center text-[12px] text-[#BBBBBB] mt-6">Licença perpétua com período de atualização incluído. Renovação de atualizações opcional. Sem assinatura recorrente.</p>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-[#F7F7F7] border-b border-[#E5E5E5]" style="padding-top:96px;padding-bottom:96px;">
+      <div class="container-inner" style="text-align:center;">
+        <h2 class="text-[26px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111] mb-5">
+          Comece a escrever documentação que dura
+        </h2>
+        <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#555555] mb-8" style="max-width:440px;margin-left:auto;margin-right:auto;">
+          Entre em contato para solicitar uma demonstração ou acesso antecipado para o seu time.
+        </p>
+        <a href="mailto:contato@setbox.com.br?subject=ReDoc - Solicitar demonstração" class="inline-block text-[14px] bg-[#FB0D1C] text-white px-6 py-3 rounded-[6px] hover:bg-[#C4000F] transition-colors font-semibold">
+          Solicitar demonstração
+        </a>
+        <div class="mt-4">
+          <a href="mailto:contato@setbox.com.br" class="inline-flex items-center gap-2 text-[14px] text-[#FB0D1C] font-medium hover:opacity-70 transition-opacity">contato@setbox.com.br →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-[#E5E5E5]">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14 flex flex-col md:flex-row gap-10 md:gap-16">
+      <div class="flex-shrink-0 md:min-w-[180px]">
+        <a href="../../index.html"><img src="../../assets/setbox-lateral.png" alt="Setbox" class="h-6 w-auto mb-5" width="1405" height="466"></a>
+        <p class="text-[12px] text-[#BBBBBB] mb-1">© 2026 Setbox Serviços Digitais</p>
+        <p class="text-[12px] text-[#BBBBBB]">Rua João Bettega, 649 - Sala 3A<br>Curitiba / PR</p>
+      </div>
+      <div class="flex-1">
+        <p class="text-[12px] font-semibold text-[#111111] mb-4">Empresa</p>
+        <ul class="space-y-2.5">
+          <li><a href="../../sobre.html#empregos" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Empregos</a></li>
+          <li><a href="https://github.com/setbox" target="_blank" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Open Source</a></li>
+          <li><a href="http://www.bytecoracao.ong.br" target="_blank" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Byte Coração</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
